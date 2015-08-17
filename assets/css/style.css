@@ -1,0 +1,92 @@
+body {
+	font-family: sans-serif;
+	font-size: 14px;
+	line-height: 1.3em;
+}
+
+table td {
+	vertical-align: top;
+}
+
+#loader {
+	position: absolute; 
+	right: 5px;
+	top: 5px; 
+	width: 16px;
+	height: 16px;
+	display: none;
+}
+
+#holder {
+    height: 100px;
+    width: 710px;
+    background-color: white;
+    border: 5px dashed #ccc;
+    position: relative;
+}
+#holder.hover {
+	border: 5px dashed #333;
+}
+#holder::after {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	content: "Drop many files here";
+	font-size: 20px;
+	text-align: center;
+	z-index: 100;
+	line-height: 100px;
+	color: #ccc;
+}
+
+#status {
+    width: 250px;
+    background: #efefef;
+    margin: 5px 0 0 0;
+    padding: 10px;
+}
+#status.success {
+	display: none;
+}
+#status.fail {
+	background: #ffcdcd;
+}
+
+
+#playlist {
+	width: 700px;
+	background: #eee;
+	padding: 5px 10px;
+	margin: 10px 0 0 0;
+}
+#playlist:empty {
+	display: none;
+}
+#playlist .song {
+	border: 1px solid #ccc;
+	margin: 0 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+#playlist .song.active {
+	background: #fbf7e0;
+}
+#playlist .song:hover {
+	background: #e0fbe6;
+}
+
+
+.player {
+	position: relative;
+	display: none;
+	margin: 0 0 0 10px;
+	background: #eee;
+	padding: 20px;
+}
+
+.player #meta {
+	margin: 5px 0;
+}
